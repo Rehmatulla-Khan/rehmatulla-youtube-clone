@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Header handleToggleSidebar={handleToggleSidebar} />
+      <Header onToggleSidebar={handleToggleSidebar} />
       <div className="app__container">
         <Sidebar sidebar={isSidebarVisible} />
         <Container fluid className="app__main ">
