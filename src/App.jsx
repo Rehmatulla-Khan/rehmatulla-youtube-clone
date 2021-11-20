@@ -14,7 +14,7 @@ function App() {
     <>
       <Header onToggleSidebar={handleToggleSidebar} />
       <div className="app__container">
-        <Sidebar sidebar={isSidebarVisible} />
+        <Sidebar isSidebarVisible={isSidebarVisible} />
         <Container fluid className="app__main ">
           <HomeScreen />
         </Container>

@@ -10,9 +10,9 @@ import {
 } from "react-icons/md";
 import "./_sidebar.scss";
 
-const Sidebar = ({ sidebar }) => {
+const Sidebar = ({ isSidebarVisible }) => {
   return (
-    <nav className={sidebar ? "sidebar open" : "sidebar"}>
+    <nav className={isSidebarVisible ? "sidebar open" : "sidebar"}>
       <li>
         <MdHome size={23} />
         <span>Home</span>
