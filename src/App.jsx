@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 import HomeScreen from "./screens/homeScreen/HomeScreen";
+import LoginScreen from "./screens/loginScreen/LoginScreen";
 import "./_app.scss";
 
 function App() {
@@ -11,15 +12,16 @@ function App() {
   const handleToggleSidebar = () => toggleIsSidebarVisible((value) => !value);
 
   return (
-    <>
-      <Header onToggleSidebar={handleToggleSidebar} />
-      <div className="app__container">
-        <Sidebar isSidebarVisible={isSidebarVisible} />
-        <Container fluid className="app__main ">
-          <HomeScreen />
-        </Container>
-      </div>
-    </>
+    // <>
+    //   <Header onToggleSidebar={handleToggleSidebar} />
+    //   <div className="app__container">
+    //     <Sidebar isSidebarVisible={isSidebarVisible} />
+    //     <Container fluid className="app__main ">
+    //       <HomeScreen />
+    //     </Container>
+    //   </div>
+    // </>
+    <LoginScreen />
   );
 }
 
