@@ -3,12 +3,10 @@ import {
   LOGIN_FAIL,
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
-} from "../actionType.jsx";
+} from "../actionType";
 
 const initialState = {
-  accessToken: sessionStorage.getItem("ytc-access-token")
-    ? sessionStorage.getItem("ytc-access-token")
-    : null,
+  accessToken: sessionStorage.getItem("ytc-access-token"),
   user: sessionStorage.getItem("ytc-user")
     ? JSON.parse(sessionStorage.getItem("ytc-user"))
     : null,

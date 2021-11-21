@@ -1,15 +1,13 @@
 import React from "react";
 import { AiFillEye } from "react-icons/ai";
+import thumbnail from "../../assets/temp-thumbnail.jpg";
 import "./_video.scss";
 
 const Video = () => {
   return (
     <div className="video">
       <div className="video__top">
-        <img
-          src="https://i.ytimg.com/an_webp/2B5rbsOoIUE/mqdefault_6s.webp?du=3000&sqp=CNPr6IwG&rs=AOn4CLA1DDb_8hF-9POnBjbmAkLdMUneEg"
-          alt="thumnail"
-        />
+        <img src={thumbnail} alt="thumbnail" />
         <span>05:43</span>
       </div>
 
