@@ -12,6 +12,19 @@
   height: 10vh;
   width: 100%;
 
+  &__heading__logo {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #fff;
+
+      font-weight: 900;
+
+      margin: 0.5rem;
+    }
+  }
+
   &__menu {
     display: none;
   }
@@ -90,6 +103,12 @@
 @media (max-width: $breakpoint-small) {
   .header {
     padding: 1rem;
+
+    &__heading__logo {
+      span {
+        display: none;
+      }
+    }
 
     form {
       flex: 1;

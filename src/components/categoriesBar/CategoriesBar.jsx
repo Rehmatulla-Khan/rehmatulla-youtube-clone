@@ -1,26 +1,7 @@
 import React, { useState } from "react";
-import "./_categoriesBar.scss";
+import { keywords } from "./constant";
 
-const keywords = [
-  "Cricket",
-  "Football",
-  "Coding",
-  "React",
-  "Angular",
-  "Vue",
-  "JavaScript",
-  "TypeScript",
-  "Comedy",
-  "Hockey",
-  "E-Sports",
-  "Call of Duty",
-  "News",
-  "Sports",
-  "CSS",
-  "HTML",
-  "PUBG",
-  "HAHA",
-];
+import "./_categoriesBar.scss";
 
 const CategoriesBar = () => {
   const [activeElement, setActiveElement] = useState("All");
