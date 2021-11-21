@@ -7,7 +7,7 @@ const Video = () => {
     <div className="video">
       <div className="video__top">
         <img
-          src="https://i.ytimg.com/an_webp/PoRJizFvM7s/mqdefault_6s.webp?du=3000&sqp=COO554wG&rs=AOn4CLBtalnjOqRAuhUlFoxVWyzPi65ATw"
+          src="https://i.ytimg.com/an_webp/2B5rbsOoIUE/mqdefault_6s.webp?du=3000&sqp=CNPr6IwG&rs=AOn4CLA1DDb_8hF-9POnBjbmAkLdMUneEg"
           alt="thumnail"
         />
         <span>05:43</span>
