@@ -15,7 +15,7 @@ import "./_sidebar.scss";
 const Sidebar = ({ isSidebarVisible }) => {
   const dispatch = useDispatch();
 
-  const logOutHandler = () => {
+  const handleLogout = () => {
     dispatch(logout());
   };
 
@@ -53,7 +53,7 @@ const Sidebar = ({ isSidebarVisible }) => {
 
       <hr />
 
-      <li onClick={logOutHandler}>
+      <li onClick={handleLogout}>
         <MdExitToApp size={23} />
         <span>Log out</span>
       </li>
