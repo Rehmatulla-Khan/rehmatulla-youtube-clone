@@ -2,11 +2,13 @@ import firebase from "firebase/app";
 import auth from "../../firebase.js";
 import * as actionTypes from "../actionType.js";
 
+// using thunk to get the dispatch in this action for async operations
 export const login = () => async (dispatch) => {
   try {
     dispatch({
       type: actionTypes.LOGIN_REQUEST,
     });
+
     const provider = new firebase.auth.GoogleAuthProvider();
     const response = await auth.signInWithPopup(provider);
 
@@ -35,4 +37,15 @@ export const login = () => async (dispatch) => {
       payload: error.message,
     });
   }
+};
+
+export const logout = () => async (dispatch) => {
+  await auth.signOut();
+
+  dispatch({
+    type: actionTypes.LOG_OUT,
+  });
+
+  sessionStorage.removeItem("ytc-access-token");
+  sessionStorage.removeItem("ytc-user");
 };
