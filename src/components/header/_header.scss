@@ -5,12 +5,17 @@
   justify-content: space-between;
   align-items: center;
 
+  position: fixed;
+  top: 0;
+
   padding: 1rem 3rem;
 
   background: $black-primary;
 
   height: 10vh;
   width: 100%;
+
+  z-index: 100;
 
   &__menu {
     display: none;
