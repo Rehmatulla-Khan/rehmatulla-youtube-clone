@@ -8,6 +8,7 @@ import { useHistory } from "react-router";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./_app.scss";
+import WatchScreen from "./screens/watchScreen/WatchScreen";
 
 const Layout = ({ children }) => {
   const [isSidebarVisible, toggleIsSidebarVisible] = useState(false);
@@ -53,6 +54,12 @@ function App() {
       <Route path="/search" exact>
         <Layout>
           <h1>search results</h1>
+        </Layout>
+      </Route>
+
+      <Route path="/watch/:id" exact>
+        <Layout>
+          <WatchScreen />
         </Layout>
       </Route>
 

@@ -26,13 +26,13 @@ export const getPopularVideos = () => async (dispatch, getState) => {
       },
     });
   } catch (error) {
-    console.log(error.message);
     dispatch({
       type: actionTypes.HOME_VIDEOS_FAIL,
       payload: error.message,
     });
   }
 };
+
 export const getVideosByCategories =
   (keywords) => async (dispatch, getState) => {
     try {
@@ -66,3 +66,31 @@ export const getVideosByCategories =
       });
     }
   };
+
+export const getVideoById = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: actionTypes.GET_VIDEO_BY_ID_REQUEST,
+    });
+
+    const { data } = await request("videos/", {
+      params: {
+        part: "snippet,statistics",
+        id: id,
+      },
+    });
+
+    console.log("this is data", data);
+
+    dispatch({
+      type: actionTypes.GET_VIDEO_BY_ID_SUCCESS,
+      payload: data.items[0],
+    });
+  } catch (error) {
+    console.log(error);
+    dispatch({
+      type: actionTypes.GET_VIDEO_BY_ID_FAIL,
+      payload: error.message,
+    });
+  }
+};

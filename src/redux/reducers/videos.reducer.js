@@ -42,3 +42,38 @@ export const homeVideosReducer = (
       return state;
   }
 };
+
+export const selectedVideoReducer = (
+  preState = {
+    loading: true,
+    video: null,
+  },
+  action
+) => {
+  const { payload, type } = action;
+
+  switch (type) {
+    case actionTypes.GET_VIDEO_BY_ID_REQUEST:
+      return {
+        ...preState,
+        loading: true,
+      };
+    case actionTypes.GET_VIDEO_BY_ID_SUCCESS:
+      return {
+        ...preState,
+        video: payload,
+        loading: false,
+      };
+
+    case actionTypes.GET_VIDEO_BY_ID_FAIL:
+      return {
+        ...preState,
+        video: null,
+        loading: false,
+        error: payload,
+      };
+
+    default:
+      return preState;
+  }
+};

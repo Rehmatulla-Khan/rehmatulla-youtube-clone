@@ -7,6 +7,7 @@ import {
 import "./_categoriesBar.scss";
 
 const keywords = [
+  "All",
   "Cricket",
   "Football",
   "Coding",
@@ -16,6 +17,7 @@ const keywords = [
   "JavaScript",
   "TypeScript",
   "Comedy",
+  "BB ki vines",
   "Hockey",
   "E-Sports",
   "Call of Duty",
