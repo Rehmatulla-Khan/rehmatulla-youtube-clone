@@ -1,13 +1,12 @@
 import * as actionTypes from "../actionType";
 
-export const channelDetailsReducer = (
-  preState = {
-    loading: true,
-    channel: {},
-    subscriptionStatus: false,
-  },
-  action
-) => {
+const initialState = {
+  loading: true,
+  channel: {},
+  subscriptionStatus: false,
+};
+
+export const channelDetailsReducer = (preState = initialState, action) => {
   const { payload, type } = action;
 
   switch (type) {

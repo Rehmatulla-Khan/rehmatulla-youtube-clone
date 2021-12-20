@@ -32,7 +32,7 @@ export const checkSubscriptionStatus = (id) => async (dispatch, getState) => {
       type: actionTypes.SUBSCRIPTION_STATUS_REQUEST,
     });
 
-    const { data } = await request("/subscription", {
+    const { data } = await request("/subscriptions", {
       params: {
         part: "snippet",
         forChannelId: id,
